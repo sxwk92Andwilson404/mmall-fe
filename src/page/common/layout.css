@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 13:38:35
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-06-28 15:55:23
+* @Last Modified time: 2017-06-28 17:02:43
 */
 /*css reset*/
 *{
@@ -84,8 +84,12 @@ input[type='checkbox'] {
 }
 /*loading*/
 .loading {
+	margin: 10px auto;
 	display: block;
 	width:65px;
 	height: 65px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
 	background: url(../../image/icon/loading.gif) no-repeat;
+	opacity: 0.6;
 }
