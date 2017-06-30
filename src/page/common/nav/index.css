@@ -1,0 +1,32 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-28 21:00:43
+* @Last Modified by:   sxwk92
+* @Last Modified time: 2017-06-28 21:22:46
+*/
+.nav {
+	background: #eee;
+	height: 30px;
+	line-height: 30px;
+}
+/*用户部分*/
+.nav .user{
+	float: left;
+}
+/*登录注册与欢迎不能同时存在，先隐藏欢迎部分*/
+.nav .user.login{
+	display:none;
+}
+.nav .user .link{
+	margin-right:5px;
+}
+
+/*导航链接部分*/
+.nav .nav-list {
+	float:right;
+}
+
+.nav .nav-list .nav-item {
+	display: inline-block;
+	margin-left: 5px;
+}

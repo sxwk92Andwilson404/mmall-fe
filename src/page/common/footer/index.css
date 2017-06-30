@@ -1,0 +1,23 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-29 08:46:06
+* @Last Modified by:   sxwk92
+* @Last Modified time: 2017-06-29 09:28:14
+*/
+.footer	{
+	padding-bottom: 10px;
+}
+.footer .links {
+	text-align: center;
+	color:#666;
+	line-height:30px;
+}
+
+.footer .links .link{
+	padding:0 10px;
+}
+.footer .copyright {
+	text-align: center;
+	color:#666;
+	line-height: 30px;
+}
