@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-27 22:01:21
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-06-28 12:51:22
+* @Last Modified time: 2017-06-30 11:05:33
 */
 
 'use strict';
@@ -82,7 +82,7 @@ var _mm={
 	},
 	// 统一登录处理
 	doLogin : function(){
-		window.location.href='./login.html?redirect=' + encodeURIComonent(window.location.href);
+		window.location.href='./user-login.html?redirect=' + encodeURIComonent(window.location.href);
 	},
 	goHome : function(){
 		window.location.href='./index.html';
