@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 22:41:22
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-02 10:05:52
+* @Last Modified time: 2017-07-02 23:06:51
 */
 
 'use strict';
@@ -11,7 +11,7 @@ var _mm = require('util/mm.js');
 
 var _user = {
 	// 用户登录
-	login : function (resolve,reject){
+	login : function (userInfo,resolve,reject){
 		_mm.request({
 			url     : _mm.getServerUrl('/user/login.do'),
 			data    : userInfo,
