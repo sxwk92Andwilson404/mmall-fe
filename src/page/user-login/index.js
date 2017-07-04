@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-24 18:18:24
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-02 11:14:24
+* @Last Modified time: 2017-07-04 20:45:52
 */
 
 'use strict';
@@ -62,6 +62,7 @@ var page ={
 			formError.show(validateResult.msg);
 		}
 	},
+	// 表单字段的验证
 	formValidate : function(formData){
 		var result = {
 			status : false,
@@ -84,4 +85,4 @@ var page ={
 
 $(function(){
 	page.init();
-})
+});

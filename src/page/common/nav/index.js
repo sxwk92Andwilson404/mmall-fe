@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 21:01:10
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-06-29 00:05:59
+* @Last Modified time: 2017-07-03 22:34:30
 */
 
 'use strict';
@@ -25,7 +25,7 @@ var nav = {
 		});
 		// 注册点击事件
 		$('.js-register').click(function(){
-			window.location.href='./register.html';
+			window.location.href='./user-register.html';
 		});
 		// 退出点击事件
 		$('.js-logout').click(function(){

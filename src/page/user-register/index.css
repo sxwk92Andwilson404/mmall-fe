@@ -2,14 +2,14 @@
 * @Author: Administrator
 * @Date:   2017-07-02 23:38:34
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-02 23:42:11
+* @Last Modified time: 2017-07-04 21:02:53
 */
 /*最外层容器*/
 .page-wrap {
 	padding:40px 0;
 	background: #e72955;
 }
-/**/
+/*表单框*/
 .user-con {
 	position: relative;
 	margin:0 auto;
@@ -20,7 +20,7 @@
 .user-con .user-title {
 	text-align: center;
 	padding: 10px 0 ;
-	border: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	font-size: 18px;
 	font-weight: bold;
 	color:#666;
@@ -70,10 +70,11 @@
 
 .user-con .user-item .user-content{
 	padding:10px 0 10px 50px;
-	width:306px;
+	width:308px;
 	height: 18px;
 	line-height: 18px;
-	font-size: 1px solid #bdbdbd;
+	font-size:15px;
+	border: 1px solid #bdbdbd;
 	outline:none;
 }
 

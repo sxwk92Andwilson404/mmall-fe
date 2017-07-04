@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-27 22:01:21
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-06-30 11:05:33
+* @Last Modified time: 2017-07-03 22:23:57
 */
 
 'use strict';
@@ -73,7 +73,7 @@ var _mm={
 		}
 		// 手机号验证
 		if ('phone' === type) {
-			return /^1\d｛10｝$/.test(value);
+			return /^1\d{10}$/.test(value);
 		}
 		// 邮箱格式验证
 		if ('email' === type) {
@@ -82,7 +82,7 @@ var _mm={
 	},
 	// 统一登录处理
 	doLogin : function(){
-		window.location.href='./user-login.html?redirect=' + encodeURIComonent(window.location.href);
+		window.location.href='./user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
 	goHome : function(){
 		window.location.href='./index.html';

@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 22:41:22
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-03 11:58:25
+* @Last Modified time: 2017-07-04 20:48:51
 */
 
 'use strict';
@@ -52,6 +52,40 @@ var _user = {
 			error   : reject  
 		});
 	},
+	// 获取用户密码提示问题
+	getQuestion : function(username,resolve,reject){
+		_mm.request({
+			url     : _mm.getServerUrl('/user/forget_get_question.do'),
+			data    : {
+				username:username
+			},
+			method  : 'POST',
+			success : resolve,
+			error   : reject  
+		});
+	},
+	    // 检查密码提示问题答案
+    checkAnswer : function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/forget_check_answer.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 重置密码
+    resetPassword : function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/forget_reset_password.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+
+
 	// 登出
 	logout : function (resolve,reject){
 		_mm.request({
@@ -60,7 +94,7 @@ var _user = {
 			success : resolve,
 			error   : reject  
 		});
-	},
+	}
 } 
 
 module.exports = _user;

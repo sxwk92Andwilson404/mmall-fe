@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-02 23:39:27
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-03 20:51:53
+* @Last Modified time: 2017-07-03 21:34:55
 */
 
 'use strict';
@@ -20,6 +20,7 @@ var formError = {
 		$('.error-item').hide().find('.err-msg').text('');
 	}
 };	
+
 // page 逻辑部分
 var page ={
 	init: function(){
@@ -78,7 +79,7 @@ var page ={
 			// 验证失败
 		else{
 			// 错误提示
-			formError.show(validateRusult.msg);
+			formError.show(validateResult.msg);
 		}
 	},
 	formValidate : function(formData){
