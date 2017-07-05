@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 22:41:22
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-05 13:06:00
+* @Last Modified time: 2017-07-05 18:01:33
 */
 
 'use strict';
@@ -96,6 +96,16 @@ var _user = {
 	updateUserInfo : function(userInfo, resolve, reject){
         _mm.request({
             url     : _mm.getServerUrl('/user/update_information.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 登录状态下更新密码
+    updatePassword :function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/reset_password.do'),
             data    : userInfo,
             method  : 'POST',
             success : resolve,

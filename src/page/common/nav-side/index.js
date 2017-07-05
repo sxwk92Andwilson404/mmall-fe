@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-29 11:59:56
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-06-29 17:42:38
+* @Last Modified time: 2017-07-05 17:33:38
 */
 'use strict';
 require('./index.css');
@@ -16,7 +16,7 @@ var navSide = {
 		navList :[
 			{name : 'user-center',desc:'个人中心',href:'./user-center.html'},
 			{name : 'order-list',desc:'我的订单',href:'./order-list.html'},
-			{name : 'pass-update',desc:'修改密码',href:'./pass-update.html'},
+			{name : 'user-pass-update',desc:'修改密码',href:'./user-pass-update.html'},
 			{name : 'about',desc:'关于 MMall',href:'./about.html'}
 		]
 	},
