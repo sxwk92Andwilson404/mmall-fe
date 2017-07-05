@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 22:41:22
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-05 09:34:05
+* @Last Modified time: 2017-07-05 13:06:00
 */
 
 'use strict';
@@ -92,6 +92,16 @@ var _user = {
 			error   : reject  
 		});
 	},
+	// 更新个人信息
+	updateUserInfo : function(userInfo, resolve, reject){
+        _mm.request({
+            url     : _mm.getServerUrl('/user/update_information.do'),
+            data    : userInfo,
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
 	// 登出
 	logout : function (resolve,reject){
 		_mm.request({
