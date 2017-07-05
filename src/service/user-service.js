@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 22:41:22
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-04 20:48:51
+* @Last Modified time: 2017-07-05 09:34:05
 */
 
 'use strict';
@@ -84,8 +84,14 @@ var _user = {
             error   : reject
         });
     },
-
-
+    getUserInfo : function (resolve,reject){
+		_mm.request({
+			url     : _mm.getServerUrl('/user/get_information.do'),
+			method  : 'POST',
+			success : resolve,
+			error   : reject  
+		});
+	},
 	// 登出
 	logout : function (resolve,reject){
 		_mm.request({
