@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-29 09:40:23
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-06-29 11:37:27
+* @Last Modified time: 2017-07-06 15:54:42
 */
 
 'use strict';
@@ -12,6 +12,7 @@ var _mm = require('util/mm.js');
 // 通用页面头部
 var header = {
 	init : function(){
+		this.onLoad();
 		this.bindEvent();
 	},
 
