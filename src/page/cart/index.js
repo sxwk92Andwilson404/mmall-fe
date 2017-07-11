@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-11 18:15:41
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-11 22:25:46
+* @Last Modified time: 2017-07-11 22:29:41
 */
 
 'use strict';
@@ -36,7 +36,7 @@ var page = {
     },
     // 加载购物车信息
     loadCart : function(){
-        var _this       = this,
+        var _this       = this;
         // 获取购物车列表
         _cart.getCartList(function(){
         	_this.renderCart(res);
