@@ -1,9 +1,16 @@
+{{#notEmpty}}
 <div class="cart-header">
 			<table class="cart-table">
 				<tr>
 					<th class="cart-cell cell-check">
 						<label class="cart-label">
-							<input type="checkbox" class="cart-select-all">
+							{{#allChecked}}
+							<input type="checkbox" class="cart-select-all" checked />
+							{{/allChecked}}
+							{{^allChecked}}
+							<input type="checkbox" class="cart-select-all" />
+							{{/allChecked}}
+							
 							<span>全选</span>
 						</label>
 					</th>
@@ -16,36 +23,50 @@
 			</table>
 		</div>
 		<div class="cart-list">
-			<table class="cart-table">
+			{{#cartProductVoList}}
+			<table class="cart-table " data-product-id='{{productId}}'>
 				<tr>
 					<td class="cart-cell cell-check">
 						<label class="cart-label">
-							<input type="checkbox" class="cart-select">
+							{{#productChecked}}
+							<input type="checkbox" class="cart-select" checked />
+							{{/productChecked}}
+							{{^productChecked}}
+							<input type="checkbox" class="cart-select" />
+							{{/productChecked}}
 						</label>
 					</td>
 					<td class="cart-cell cell-img">
-						<img class="p-img" src="http://img.happymmall.com/f35cde2b-2f4e-4e2e-80db-a358e8bb7477.jpg"/>
+						<a href="./detail.html?productId={{productId}}" class="link">
+							<img class="p-img" src="{{imageHost}}{{productMainImage}}" alt="{{productName}}"/>
+						</a>
 					</td>
 					<td class="cart-cell cell-info">
-						<a href="./detail.html?productId=" class="link">xxxxxxxxxxx</a>
+						<a href="./detail.html?productId={{productId}}" class="link">{{productName}}</a>
 					</td>
-					<td class="cart-cell cell-price">￥111</td>
+					<td class="cart-cell cell-price">￥{{productPrice}}</td>
 					<td class="cart-cell cell-count">
 						<span class="count-btn minus">-</span>
-						<input class="count-input" value="111" />
+						<input class="count-input" value="{{quantity}}" data-max="{{productStock}}" />
 						<span class="count-btn plus">+</span>
 					</td>
-					<td class="cart-cell cell-total"></td>
+					<td class="cart-cell cell-total">￥{{productTotalPrice}}</td>
 					<td class="cart-cell cell-opera">
 						<span class="link cart-delete">删除</span>
 					</td>
 				</tr>	
 			</table>
+			{{/cartProductVoList}}
 		</div>
 		<div class="cart-footer">
 			<div class="select-con">
-				<label for="">
-					<input type="checkbox" class="cart-select-all">
+				<label>
+					{{#allChecked}}
+					<input type="checkbox" class="cart-select-all" checked />
+					{{/allChecked}}
+					{{^allChecked}}
+					<input type="checkbox" class="cart-select-all" />
+					{{/allChecked}}
 					<span>全选</span>
 				</label>
 			</div>
@@ -56,12 +77,15 @@
 				</span>
 			</div>
 			<div class="submit-con">
-				<span>总价</span>
-				<span class="submit-total">￥11111</span>
+				<span>总价:</span>
+				<span class="submit-total">￥{{cartTotalPrice}}</span>
 				<span class="btn btn-submit">去结算</span>
 			</div>
 		</div>
+		{{/notEmpty}}
+		{{^notEmpty}}
 		<p class="err-tip">
 			<span>您的购物车空空如也</span>
 			<a href="./index.html">立即去购物</a>
 		</p>
+		{{/notEmpty}}
