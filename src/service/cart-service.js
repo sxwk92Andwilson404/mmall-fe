@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-06-28 23:58:03
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-12 10:32:48
+* @Last Modified time: 2017-07-12 20:29:59
 */
 
 'use strict';
@@ -94,6 +94,6 @@ var _cart = {
             success : resolve,
             error   : reject
         });
-    }
+    } 
 }
 module.exports = _cart;
