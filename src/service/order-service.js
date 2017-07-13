@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-13 14:15:46
 * @Last Modified by:   sxwk92
-* @Last Modified time: 2017-07-13 14:24:58
+* @Last Modified time: 2017-07-13 18:36:16
 */
 
 'use strict';
@@ -11,10 +11,9 @@ var _mm = require('util/mm.js');
 
 var _order = {
 	// 获取商品列表
-	getProductList: function (listParam,resolve,reject){
+	getProductList: function (resolve,reject){
 		_mm.request({
-			url     : _mm.getServerUrl('/product/list.do'),
-			data    : listParam,
+			url     : _mm.getServerUrl('/order/get_order_cart_product.do'),
 			success : resolve,
 			error   : reject  
 		});
@@ -22,4 +21,4 @@ var _order = {
 	
 } 
 
-module.exports = _product;
+module.exports = _order;
